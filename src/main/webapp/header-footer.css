@@ -1,0 +1,163 @@
+@charset "ISO-8859-1";
+
+body {
+	margin: 0px;
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*header*/
+nav {
+	
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    z-index: +99;
+    background-color: #bbe1fa;
+  }
+  
+  .logo {
+    margin-left: 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 110px;
+  }
+  .menu-item{
+   margin-left: 50px;
+   margin-right: 10px;
+   text-decoration: none;
+   color: black;
+  }
+  .menu-item a{
+    position: relative;
+  }
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .menu-item::after
+  {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transform: scaleX(0);
+    transition: 0.5s;
+  }
+
+  .menu-item:hover::after
+  {
+    transform: scaleX(1);
+  }
+
+  
+  .signup-login {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .signup-login img{
+    width: 48px;
+    border-radius: 24px;
+  }
+
+  .username{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .login-button, .signup-button {
+    padding: 8px 16px;
+    background-color: #0F4C75;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 5px;
+    display: flex;
+    border:#0F4C75;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .login-button:hover,.signup-button:hover{
+    background-color: #fff;
+    color: #0F4C75;
+  
+  }
+  .signup-login-divider {
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 5px;
+  }
+  
+  
+  
+  
+  /*footer*/
+  
+  .footer {
+  	
+    background-image: linear-gradient(lightblue,white);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-media-links img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  
+  .footer-buttons a {
+    margin: 0 5px;
+  }
