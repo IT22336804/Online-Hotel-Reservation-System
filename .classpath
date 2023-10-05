@@ -13,8 +13,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/Sanduni_105223/Downloads/JAR Files-20230929T191930Z-001/JAR Files/javax.servlet-3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sanduni_105223/Downloads/JAR Files-20230929T191930Z-001/JAR Files/mysql-connector-java-5.1.48-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sanduni_105223/Downloads/JAR Files-20230929T191930Z-001/JAR Files/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Asiri/OneDrive/Documents/Asiri/Practises/CustomerDemo_jarfiles/JAR Files-20230729T120400Z-001/JAR Files/javax.servlet-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Asiri/OneDrive/Documents/Asiri/Practises/CustomerDemo_jarfiles/JAR Files-20230729T120400Z-001/JAR Files/mysql-connector-java-5.1.48-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Asiri/OneDrive/Documents/Asiri/Practises/CustomerDemo_jarfiles/JAR Files-20230729T120400Z-001/JAR Files/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
