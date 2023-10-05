@@ -93,7 +93,7 @@ public class CustomerDBUtil {
 		return isSuccess;
 	}
 	
-public static List<Customer>getCustomerDetails(String Id){
+	public static List<Customer>getCustomerDetails(String Id){
 		
 		int convertedID = Integer.parseInt(Id);
 		
@@ -126,5 +126,34 @@ public static List<Customer>getCustomerDetails(String Id){
 		
 		return cus;
 	}
+
+	public static boolean deleteCustomer(String id) {
+		boolean isSuccess = false;
+	
+		int convId = Integer.parseInt(id);
+	
+		try {
+
+		
+			String sql = "delete from Customer where id = '"+convId+"'";
+
+		
+			int result = DBConnect.getDBConnection().executeUpdate(sql);
+		
+			if(result > 0) {
+				isSuccess = true;
+			}else {
+				isSuccess = false;
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	
+		return isSuccess;
+	}
+
+
+	
 	
 }

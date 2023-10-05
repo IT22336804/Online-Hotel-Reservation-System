@@ -33,5 +33,14 @@
     	<servlet-name>customerupdate</servlet-name>
     	<url-pattern>/update</url-pattern>
     </servlet-mapping>
+    
+    	<servlet>
+    	<servlet-name>deletecustomer </servlet-name>
+    	<servlet-class>com.customer.DeleteCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>deletecustomer</servlet-name>
+    	<url-pattern>/delete</url-pattern>
+    </servlet-mapping>
 		 
 </web-app>
