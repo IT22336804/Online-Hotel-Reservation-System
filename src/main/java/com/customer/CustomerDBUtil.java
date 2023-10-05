@@ -68,6 +68,63 @@ public class CustomerDBUtil {
 		
 		return isSuccess;
 	}
+	public static boolean updatecustomer(String id ,String name , String email , String phone , String username , String password) {
+		boolean isSuccess = false;
+		
+		try {
+
+			
+			String sql = "update customer set name='"+name+"',email='"+email+"' , phone='"+phone+"',username='"+username+"',password='"+password+"'"
+			+ "where id='"+id+"'"; 
+			
+
+			int rs = DBConnect.getDBConnection().executeUpdate(sql);
+			
+			if(rs > 0) {
+				isSuccess = true;
+			}else {
+				isSuccess = false;
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+	}
 	
+public static List<Customer>getCustomerDetails(String Id){
+		
+		int convertedID = Integer.parseInt(Id);
+		
+		ArrayList<Customer>cus = new ArrayList<>();
+		
+		try {
+
+			
+			String sql = "select * from Customer where id='"+convertedID+"'";
+
+			 rs = DBConnect.getDBConnection().executeQuery(sql);
+			
+			//will return a boolean value
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String name = rs.getString(2);
+				String email = rs.getString(3);
+				String phone = rs.getString(4);
+				String username = rs.getString(5);
+				String password = rs.getString(6);
+				
+				Customer c = new Customer(id , name , email , phone , username , password);
+				cus.add(c);
+			}
+			
+		}
+		catch(Exception e) {
+			
+		}
+		
+		return cus;
+	}
 	
 }
