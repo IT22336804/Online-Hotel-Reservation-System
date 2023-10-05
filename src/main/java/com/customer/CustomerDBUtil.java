@@ -44,4 +44,30 @@ public class CustomerDBUtil {
 		return cus;
 			
 		}
+	
+	public static boolean insertcustomer(String name , String email , String phone ,String username , String password) {
+		boolean isSuccess = false;
+		
+		try {
+
+			String sql = "Insert into customer values (0 ,'"+name+"' , '"+email+"' , '"+phone+"' , '"+username+"' , '"+password+"')";
+
+			
+			int rs = DBConnect.getDBConnection().executeUpdate(sql);
+			
+			if(rs > 0) {
+				isSuccess = true;
+			}else {
+				isSuccess = false;
+			}
+			
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+	}
+	
+	
 }
