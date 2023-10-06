@@ -15,7 +15,7 @@ body {
         form {
             max-width: 400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 80px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;

@@ -8,11 +8,16 @@
 <link rel="stylesheet" href="header-footer.css">
 <title>Login</title>
 <style>
+	
+	
  	table{
  		display: flex;
     	justify-content: center;
     	align-items: center;
     	margin-top:50px;
+    	font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
  	}
  	h1 , h2{
  		
@@ -24,6 +29,61 @@
  	h1{
  		color:blue;
  	}
+ 	
+
+    td, th {
+        border: none;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #3498db;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #3498db;
+        color: white;
+    }
+
+ 	
+    a {
+        text-decoration: none;
+    }
+
+    input[type="button"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        
+    }
+
+    input[type="button"]:hover {
+        background-color: #2980b9;
+        
+    }
+	.button-container {
+    	margin-top: 20px; 
+    	text-align: center;
+    	margin-left: 50px; 
+	}
+
+	input[type="button"] {
+    	margin-left: 10px; 
+	}
+	
+ 	
+ 	
 </style>
 </head>
 <body>
@@ -53,7 +113,7 @@
 	<table>
 	<c:forEach var = "cus" items ="${cusDetails}">
 	<h1> Hi ${cus.name} </h1>
-	<h2>You have logged successfully</h2>
+	<h2>User Account</h2>
 	
 	<c:set var = "id" value = "${cus.id}"/>
 	<c:set var = "name" value = "${cus.name}"/>
@@ -85,7 +145,7 @@
 	<tr>
 		<td>Customer UserName</td>
 		<td>${cus.username}</td>
-	<tr>
+	</tr>
 	
 	<tr>
 	<td>Customer Password</td>
@@ -104,10 +164,12 @@
 		<c:param name = "pass" value = "${password}"/>
 	</c:url>
 	
+	<div class = "button-container">
 	<a href = "${cusupdate}">
 	<input type = "button" name = "update" value = "Update My Data">
 	</a>
-	<br>
+	
+	</div>
 	
 	<c:url value = "deletecustomer.jsp" var = "cusdelete">
 		<c:param name = "id" value = "${id}"/>
@@ -117,9 +179,12 @@
 		<c:param name = "uname" value = "${username}"/>
 		<c:param name = "pass" value = "${password}"/>
 	</c:url>
+	
+	<div class = "button-container">
 	<a href = "${cusdelete}">
 	<input type = "button" name = "delete" value = "Delete My Account">
 	</a>
+	</div>
 	
 	
 	 <footer class="footer">

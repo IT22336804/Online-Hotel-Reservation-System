@@ -5,7 +5,46 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="header-footer.css">
-<title>Insert title here</title>
+<title>Account Update</title>
+<style>
+	/* Add these styles to your header-footer.css or create a new CSS file */
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* You can add more styling as needed */
+	h1{
+		text-align:center;
+		font-family:cursive;
+	}
+</style>
 </head>
 <body>
 
@@ -15,7 +54,7 @@
        </div>
        
            <div class="menu">
-               <a class="menu-item" href="#">Home</a>
+               <a class="menu-item" href="useraccount.jsp">Home</a>
                <a class="menu-item" href="#">Find Rooms</a>
                <a class="menu-item" href="#">About Us</a>
            </div>
@@ -36,7 +75,7 @@
 		String Password = request.getParameter("pass");
 		
 	%>
-
+	<h1>Update Your Profile..</h1>
 	<form action = "update" method = "post">
 	Customer ID<input type = "text" name = "cusid" value = "<%=id %>"readonly><br>
 	Name<input type = "text" name = "name" value = "<%=name%>"><br>
