@@ -1,9 +1,8 @@
 package reservations;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,28 +11,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class roomFinderServlet
- */
+
 @WebServlet("/roomFinderServlet")
 public class RoomFinderServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String guests = request.getParameter("guest");
+		request.setAttribute("guests", guests);
 		String startDate = request.getParameter("startDate");
+		request.setAttribute("startDate", startDate);
 		String endDate = request.getParameter("endDate");
+		request.setAttribute("endDate", endDate);
 		try {
-			LocalDate date = LocalDate.parse(startDate, DateTimeFormatter.ISO_DATE);
-			startDate = date.toString();
+
 			
-			LocalDate date1 = LocalDate.parse(endDate, DateTimeFormatter.ISO_DATE);
-			endDate = date.toString();
-			
-			ArrayList<Integer> roomID = ReservationDB.getUnavailableRooms(startDate, endDate);
-			
-			ArrayList<Room> roomDetails = RoomDB.getRoomDetails(roomID);
+			ArrayList<Room> roomDetails = RoomDB.getRoomDetails(startDate, endDate);
 			request.setAttribute("roomDetails", roomDetails);
 			
 		}

@@ -28,21 +28,22 @@
     
     
     <div>
-    	<form action="#" method="post">
+    	<form action="find" method="get">
     		<div>
     			<label for="guest">Guest:</label><br>
     			<select name="guest" id="guest">
+    				<option value="none" selected disabled hidden>Select an Option</option>
     				<option value="1">1 guest</option>
     				<option value="2">2 guests</option>
     				<option value="3">3 guests</option>
     			</select>
     		</div>
     		<div>
-    			<label for="guest">Check-in:</label><br>
+    			<label for="startDate">Check-in:</label><br>
     			<input type="date" name="startDate" id="startDate" min="2023-10-23" required >
     		</div>
     		<div>
-    			<label for="guest">Check-out:</label><br>
+    			<label for="endDate">Check-out:</label><br>
     			<input type="date" name="endDate" id="endDate" min="2023-10-23" required>
     		</div>
     		<div>

@@ -9,24 +9,19 @@ public class RoomDB {
 	
 	private static ResultSet rs;
 	
-	public static ArrayList<Room> getRoomDetails(ArrayList<Integer> roomID){
+	public static ArrayList<Room> getRoomDetails(String startDate, String endDate){
 		
 		ArrayList<Room> rooms = new ArrayList<Room>();
 		
 		try {
 			
-			String sql;
+		
+			String sql = "select * from room where rid not in (select roomID "
+							+ "from reservation "
+							+ "where ('"+startDate+"'>= startDate or '"+endDate+"' >= startDate) and ('"+startDate+"'<= endDate or '"+endDate+"' <= endDate))";
 			
-			if(!roomID.isEmpty()) {
-				for(Integer rid : roomID) {
-					sql = "select * from room where '"+rid+"' not in (select rid from room)";
-					rs = DBConnect.getDBConnection().executeQuery(sql);
-				}
-			}
-			else {
-				sql = "select * from room";
-				rs = DBConnect.getDBConnection().executeQuery(sql);
-			}
+			rs = DBConnect.getDBConnection().executeQuery(sql);
+				
 			
 			while(rs.next()) {
 				int rid = rs.getInt(1);

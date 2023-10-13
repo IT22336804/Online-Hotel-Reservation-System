@@ -14,5 +14,24 @@
 		<servlet-name>login</servlet-name>
 		<url-pattern>/log</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>find</servlet-name>
+		<servlet-class>reservations.RoomFinderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>find</servlet-name>
+		<url-pattern>/find</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>book</servlet-name>
+		<servlet-class>reservations.ReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>book</servlet-name>
+		<url-pattern>/book</url-pattern>
+	</servlet-mapping>
 		 
 </web-app>
+
