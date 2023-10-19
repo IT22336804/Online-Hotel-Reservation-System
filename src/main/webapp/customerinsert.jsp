@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Create account</title>
+<script src = "CustomerScript.js"></script>
 <style>
 body {
             font-family: Arial, sans-serif;
@@ -24,7 +25,7 @@ body {
         }
 
         input[type="text"],
-        input[type="password"] {
+        input[type="password"]{
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -32,16 +33,18 @@ body {
             border-radius: 3px;
         }
 
-        input[type="submit"] {
+        input[type="submit"] ,button{
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+             opacity: 0.5;
+            
         }
 
-        input[type="submit"]:hover {
+        input[type="submit"],button:hover {
             background-color: #0056b3;
         }
         .headers{
@@ -55,14 +58,59 @@ body {
 		<h1>Join Puriton Family</h1>
 		<h2>Sign Up Now</h2>
 		</div>
-	<form action = "insert" method = "post">
-		Name <input type = "text" name = "name"><br>
-		Email <input type = "text" name = "email"><br>
-		Phone<input type = "text" name = "phone"><br>
-		User Name <input type = "text" name = "uid"><br>
-		Password <input type = "password" name = "psw"><br>
 		
-		<input type = "submit" name = "submit" value = "Sign Up">		
+	
+		
+		
+	<form action = "insert" method = "post">
+		Name <input type = "text" name = "name" value="${param.name}"><br>
+		Email 
+		<%-- Display email validation error if it exists --%>
+<% if (request.getAttribute("emailError") != null) { %>
+    <div style="color: red;">
+        <p>${emailError}</p>
+    </div>
+<% } %>
+		
+		<input type = "text" name = "email"value="${param.email}"><br>
+		
+				<%-- Display phone number validation error if it exists --%>
+<% if (request.getAttribute("phoneError") != null) { %>
+    <div style="color: red;">
+        <p>${phoneError}</p>
+    </div>
+<% } %>
+		
+		Phone
+		<input type = "text" name = "phone" value="${param.phone}"maxlength = "10"><br>
+		User Name <input type = "text" name = "uid"value="${param.uid}"><br>
+		
+		
+		Password
+		 <%-- Display password complexity error if it exists --%>
+        <% if (request.getAttribute("passwordError") != null) { %>
+            <div style="color: red;">
+                <p>${passwordError}</p>
+            </div>
+        <% } %>
+		
+		 <input type = "password" name = "psw"><br>
+		
+			<%-- Display error message if it exists --%>
+    <% if (request.getAttribute("error") != null) { %>
+        <div style="color: red;">
+            <p>${error}</p>
+        </div>
+    <% } %> 
+		
+		
+		<label for="confirmCheckbox">
+      			<input type="checkbox" id="confirmCheckbox"  name="enableButtonCheckbox"onclick="enableButton()">
+      				I accept and agree to abide by the terms and conditions outlined. Checking this box confirms my understanding and commitment.
+    			</label>
+		<p>
+			<button type = "submit" name = "submit" value = "Sign Up" id="submitButton"disabled>Register</button>
+		</p>		
 	</form>
 	
 	

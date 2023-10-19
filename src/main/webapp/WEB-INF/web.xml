@@ -16,6 +16,15 @@
 		<url-pattern>/log</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>profile</servlet-name>
+		<servlet-class>com.customer.UserProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>profile</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+	
     <servlet>
     	<servlet-name>customerinsert </servlet-name>
     	<servlet-class>com.customer.CustomerInsert</servlet-class>

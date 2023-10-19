@@ -106,15 +106,13 @@ input[type="submit"]:focus {
 	
 	<fieldset>
 	<div class = "name">
-	User Name <input type = "text" name = "uid"><br>
+	User Name <input type = "text" name = "uid" required ><br>
 	</div>
 	<div class = "password">
-	Password <input type = "password" class = "password"name = "pass"><br>
+	Password <input type = "password" class = "password"name = "pass" required><br>
 	</div>
-	
+
 	<input type = "submit" name = "submit" value = "login"><br>
-	
-	
 	</form>
 	
 	<form action = "customerinsert.jsp" method = "post">

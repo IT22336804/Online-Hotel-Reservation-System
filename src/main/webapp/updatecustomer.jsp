@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="CustomerDemo.css" />
 <link rel="stylesheet" href="CustomerStyle.css">
+<script src = "CustomerScript.js"></script>
+
+		
+       
 </head>
 <body>
 		
@@ -78,7 +82,7 @@
         <div class="card shadow-sm">
           <div class="card-header bg-transparent text-center">
             <img class="profile_img" src="https://source.unsplash.com/600x300/?student" alt="student dp">
-            <h3> ${cus.name}</h3>
+            <h3><%=name%></h3>
           </div>
           <div class="card-body">
             <p class="mb-0"><strong class="pr-1">User ID:</strong><input type = "text" name = "cusid" value = "<%=id %>"readonly></p>
@@ -98,46 +102,49 @@
               <tr>
                 <th width="30%">Full Name</th>
                 <td width="2%">:</td>
-                <td><input type = "text" name = "name" value = "<%=name%>"></td>
+                <td><input type = "text" name = "name" value = "<%=name%>" required></td>
               </tr>
               <tr>
                 <th width="30%">Email Address</th>
                 <td width="2%">:</td>
-                <td><input type = "text" name = "email" value = "<%=email%>"></td>
+                <td><input type = "email" name = "email" value = "<%=email%>"required>
+                </td>
               </tr>
               <tr>
                 <th width="30%">Phone Number</th>
                 <td width="2%">:</td>
-                <td><input type = "text" name = "phone" value = "<%=phone%>"></td>
+                <td><input type = "text" name = "phone" value = "<%=phone%>"pattern="[0-9]{10}" maxlength = "10" required></td>
               </tr>
               <tr>
                 <th width="30%">User Name</th>
                 <td width="2%">:</td>
-                <td><input type = "text" name = "uname" value = "<%=userName%>"></td>
+                <td><input type = "text" name = "uname" value = "<%=userName%>" required></td>
               </tr>
               <tr>
                 <th width="30%">password</th>
                 <td width="2%">:</td>
-                <td><input type = "password" name = "pass" value = "<%=Password%>"></td>
+                <td><input type = "password" name = "pass" value = "<%=Password%>" required></td>
               </tr>
             </table>
           </div>
-         
          
         </div>
           <div style="height: 26px"></div>
         <div class="card shadow-sm">
           <div class="card-header bg-transparent border-0">
-            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Profile Edit & Delete</h3>
           </div>
           <div class="card-body pt-0">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>"Caution: Deleting or updating your profile will permanently alter your account information. Please ensure you have backed up any essential data before proceeding."</p>
           </div>
 
+	
           <div  class="ScriptTop">
-            <ul>
-                <li><a><input type = "submit" name = "submit" value="Update My Data"></a></li>   
+            <ul> 
+                <li><a><button type = "submit" name = "submit"onclick="validateAndAlert()">Update My Data</button></a></li>
+                   
             </ul>
+            <div id="validationResult"></div> 
         </div>
         	</div>
       	</div>

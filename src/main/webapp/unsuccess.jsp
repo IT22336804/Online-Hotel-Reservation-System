@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>UnSuccess</h1>
+	<a href = "login.jsp"> Relogin</a>
 </body>
 </html>

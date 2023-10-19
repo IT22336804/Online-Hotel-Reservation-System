@@ -82,7 +82,8 @@ h2 span {
 	display:inline-block;
 }
 .ScriptTop li a {
-    background: #6a4aed none repeat scroll 0 0;
+    /*background: #6a4aed none repeat scroll 0 0;*/
+    background: #FFFF00 none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     font-size: 14px;

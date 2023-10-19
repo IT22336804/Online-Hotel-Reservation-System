@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="CustomerDemo.css" />
 <link rel="stylesheet" href="CustomerStyle.css">
+ <script src = "CustomerScript.js"></script>
+
 </head>
 <body>
 		
@@ -128,15 +130,22 @@
           <div style="height: 26px"></div>
         <div class="card shadow-sm">
           <div class="card-header bg-transparent border-0">
-            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Profile Delete</h3>
           </div>
           <div class="card-body pt-0">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>"Warning: Deleting your profile will permanently erase all your account information, and this action cannot be undone. Please make sure you have backed up any essential data before confirming."</p>
+              <p>
+              <label for="confirmDeleteCheckbox">
+      			<input type="checkbox" id="confirmDeleteCheckbox" onchange="toggleDeleteButton()" name="confirmDeleteCheckbox">
+      				I understand that this action is irreversible.
+    			</label>
+              </p>
+              
           </div>
 
           <div  class="ScriptTop">
             <ul>
-                <li><a><input type = "submit" name = "submit" value="Delete My Data"></a></li>   
+                <li><a><button type = "submit" name = "submit" value="Delete My Data"id="deleteButton"onclick="confirmDelete()">Delete Profile</button></a></li>   
             </ul>
         </div>
         	</div>

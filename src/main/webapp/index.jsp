@@ -18,6 +18,7 @@
                <a class="menu-item" href="#">Home</a>
                <a class="menu-item" href="#">Find Rooms</a>
                <a class="menu-item" href="#">About Us</a>
+               <a class="menu-item" href="profile">Profile</a>
            </div>
        
        <div class="signup-login">
@@ -25,11 +26,6 @@
            <a class="signup-button" href="php\SignUp.php">Signup</a>
        </div>
     </nav>
-    
-    
-    
-    
-    
     
     
     <footer class="footer">
