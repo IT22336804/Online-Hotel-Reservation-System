@@ -6,9 +6,9 @@ import java.sql.Statement;
 
 public class DBConnect {
 	
-	private static String url = "jdbc:mysql://localhost:3306/hotel_db";
+	private static String url = "";
 	private static String dbUser = "root";
-	private static String dbPword = "2002";
+	private static String dbPword = "";
 	
 	public static Statement getDBConnection() {
 		try{

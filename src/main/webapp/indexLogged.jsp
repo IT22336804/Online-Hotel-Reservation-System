@@ -18,6 +18,7 @@
                <a class="menu-item" href="#">Home</a>
                <a class="menu-item" href="#">Find Rooms</a>
                <a class="menu-item" href="#">About Us</a>
+               <a class="menu-item" href="reservs">My Reservations</a>
            </div>
        
        <div class="signup-login">
@@ -31,8 +32,8 @@
     	<form action="find" method="get">
     		<div>
     			<label for="guest">Guest:</label><br>
-    			<select name="guest" id="guest">
-    				<option value="none" selected disabled hidden>Select an Option</option>
+    			<select name="guest" id="guest" required>
+    				<option value="" selected disabled hidden>Select an Option</option> 
     				<option value="1">1 guest</option>
     				<option value="2">2 guests</option>
     				<option value="3">3 guests</option>

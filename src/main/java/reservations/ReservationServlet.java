@@ -24,7 +24,7 @@ public class ReservationServlet extends HttpServlet {
 		boolean ret = ReservationDB.makeReservation(rid, start, end, price, guests);
 		
 		if(ret == true) {
-			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("reservs");
 			dis.forward(request, response);
 			
 		}

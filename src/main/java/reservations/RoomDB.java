@@ -16,9 +16,9 @@ public class RoomDB {
 		try {
 			
 		
-			String sql = "select * from room where rid not in (select roomID "
-							+ "from reservation "
-							+ "where ('"+startDate+"'>= startDate or '"+endDate+"' >= startDate) and ('"+startDate+"'<= endDate or '"+endDate+"' <= endDate))";
+			String sql = "SELECT * FROM room WHERE rid NOT IN (SELECT roomID "
+							+ "FROM reservation "
+							+ "WHERE ('"+startDate+"'>= startDate OR '"+endDate+"' >= startDate) AND ('"+startDate+"'<= endDate OR '"+endDate+"' <= endDate))";
 			
 			rs = DBConnect.getDBConnection().executeQuery(sql);
 				
