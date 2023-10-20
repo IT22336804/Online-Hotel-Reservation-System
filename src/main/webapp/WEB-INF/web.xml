@@ -1,2 +1,63 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+		 version="3.1">
+		 
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>customer.loginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>find</servlet-name>
+		<servlet-class>reservations.RoomFinderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>find</servlet-name>
+		<url-pattern>/find</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>book</servlet-name>
+		<servlet-class>reservations.ReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>book</servlet-name>
+		<url-pattern>/book</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>reservs</servlet-name>
+		<servlet-class>reservations.MyReservationsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reservs</servlet-name>
+		<url-pattern>/reservs</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>updateBook</servlet-name>
+		<servlet-class>reservations.UpdateReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateBook</servlet-name>
+		<url-pattern>/updateBook</url-pattern>
+	</servlet-mapping>
+		 
+</web-app>
 
