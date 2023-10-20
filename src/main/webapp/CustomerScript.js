@@ -1,27 +1,5 @@
 
 
-    function toggleDeleteButton() {
-      var checkbox = document.getElementById('confirmDeleteCheckbox');
-      var deleteButton = document.getElementById('deleteButton');
-
-      if (checkbox.checked) {
-    	  deleteButton.disabled = false; // Make the button clickable
-      } else {
-    	  deleteButton.disabled = true; // Make the button not clickable
-      }
-    }
-
-    function confirmDelete() {
-      var checkbox = document.getElementById('confirmDeleteCheckbox');
-
-      if (!checkbox.checked) {
-        alert("Please confirm that you understand this action is irreversible.");
-        return false; // prevent form submission
-      }
-
-      return true; // allow form submission
-    }
-    
     
     
   

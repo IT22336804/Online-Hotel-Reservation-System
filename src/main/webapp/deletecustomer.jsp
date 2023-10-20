@@ -135,8 +135,8 @@
           <div class="card-body pt-0">
               <p>"Warning: Deleting your profile will permanently erase all your account information, and this action cannot be undone. Please make sure you have backed up any essential data before confirming."</p>
               <p>
-              <label for="confirmDeleteCheckbox">
-      			<input type="checkbox" id="confirmDeleteCheckbox" onchange="toggleDeleteButton()" name="confirmDeleteCheckbox">
+              <label for="confirmCheckbox">
+      			<input type="checkbox" id="confirmCheckbox" name="enableButtonCheckbox" onclick = "enableButton()" >
       				I understand that this action is irreversible.
     			</label>
               </p>
@@ -145,7 +145,7 @@
 
           <div  class="ScriptTop">
             <ul>
-                <li><a><button type = "submit" name = "submit" value="Delete My Data"id="deleteButton"onclick="confirmDelete()">Delete Profile</button></a></li>   
+                <li><a><button type = "submit" id = "submitButton "name = "submit" value="Delete My Data" disabled>Delete Profile</button></a></li>   
             </ul>
         </div>
         	</div>

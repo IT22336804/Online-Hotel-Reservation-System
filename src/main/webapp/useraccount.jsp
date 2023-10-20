@@ -31,6 +31,8 @@
        <div class="signup-login">
            <a class="login-button" href="php\loginUser.php">Login</a>
            <a class="signup-button" href="php\SignUp.php">Signup</a>
+		   <a class="logout-button" href="logout">Logout</a>
+           
        </div>
     </nav>
 	

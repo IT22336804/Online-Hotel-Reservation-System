@@ -11,9 +11,7 @@ html {
   box-sizing: inherit;
 }
 
-article, header, section, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-    display: block;
-}
+
 body {
     color: #222;
     font-size: 100%;
@@ -82,8 +80,8 @@ h2 span {
 	display:inline-block;
 }
 .ScriptTop li a {
-    /*background: #6a4aed none repeat scroll 0 0;*/
-    background: #FFFF00 none repeat scroll 0 0;
+    background: #6a4aed none repeat scroll 0 0;
+    /*background: #FFFF00 none repeat scroll 0 0;*/
     color: #fff;
     display: inline-block;
     font-size: 14px;

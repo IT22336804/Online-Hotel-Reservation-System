@@ -99,7 +99,7 @@ input[type="submit"]:focus {
 
 	 
 
-	<h1>The Puriton Inn</h1>
+	<h1>The Puriton</h1>
 	<div class = "container">
 	
 	<form action = "log" method = "post">
