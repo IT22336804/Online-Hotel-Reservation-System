@@ -5,19 +5,19 @@ body {
 	min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /*header*/
 nav {
-	
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     width: 100%;
     z-index: +99;
-    background-color: #bbe1fa;
+    background-color: #B4975A;
   }
   
   .logo {
@@ -80,25 +80,26 @@ nav {
 
   .username{
     text-decoration: none;
-    color: #fff;
+    color: #B4975A;
     margin-right: 20px;
   }
   
   .login-button, .signup-button {
     padding: 8px 16px;
-    background-color: #0F4C75;
-    color: #fff;
+    background-color: #444444;
+    color: #B4975A;
     border-radius: 20px;
     text-decoration: none;
     margin-right: 5px;
     display: flex;
-    border:#0F4C75;
+    border:#444444;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
+    transition: 0.3s;
   }
   .login-button:hover,.signup-button:hover{
     background-color: #fff;
-    color: #0F4C75;
+    color: #444444;
   
   }
   .signup-login-divider {
@@ -115,7 +116,8 @@ nav {
   
   .footer {
   	
-    background-image: linear-gradient(lightblue,white);
+    background-color: #444444;
+    color: white;
     padding: 20px;
     text-align: center;
     margin-top: auto;
@@ -152,6 +154,11 @@ nav {
     align-items: center;
   }
   
+  .social-media-links a{
+	  text-decoration: none;
+	  color: white;
+  }
+  
   .social-media-links img {
     width: 20px;
     height: 20px;
@@ -159,5 +166,7 @@ nav {
   }
   
   .footer-buttons a {
+	text-decoration: none;
+	color: white;
     margin: 0 5px;
   }
