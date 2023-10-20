@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body, h1, h2, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #444444;
+    color:#B4975A ;
+    text-align: center;
+    padding: 20px;
+}
+
+.pagecon2{
+	
+	background-color: lightgray;
+	
+}
+
+.button {
+  border: none;
+  color: white;
+  height: auto;
+  width:auto;
+  padding: 4px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button1,
+.button2 {
+  background-color: #c3b28f; 
+  color: black; 
+  border: 2px solid #444444;
+  border-radius: 5px;
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: #B4975A;
+  color: white;
+}
+
+.button2{
+	margin-top: 10px;
+}
+
+.sub-input, .msg-input{
+	margin-top: 3px;
+	background-color: rgb(0, 123, 255, 0.1);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.inqForm{
+	width: 500px;
+	margin-left: 12px;
+	margin-top: 5px;
+}
+
+
+/* Style the page container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* Style the contact information section */
+.contact-info {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-info p{
+  font-size: small;
+  font-weight: 600;
+  color: #333;
+}
+
+td strong{
+  padding-right: 20px ;
+  color: #333;
+}
+
+.contact-info h2 {
+    color: #333;
+
+}
+
+/* Style the social links section */
+
+.social-linx{
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.social-linx h2 {
+  color: #333;
+
+}
+
+.social-linx p{
+  font-size: small;
+  font-weight: 600;
+  color: #333;
+}
+
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+
+.wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1):hover .icon{
+    background: #4267B2;
+  }
+  .wrapper .button:nth-child(2):hover .icon{
+    background: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background: #E1306C;
+  }
+  .wrapper .button:nth-child(4):hover .icon{
+    background: #ff0000;
+  }
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover .icon i{
+    color: #fff;
+  }
+
+  .wrapper .button .icon a{
+    color: #333;
+  }
+
+  .wrapper .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1) span{
+    color: #4267B2;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: #E1306C;
+  }
+  .wrapper .button:nth-child(4) span{
+    color: #ff0000;
+  }
