@@ -45,7 +45,7 @@
 		String userName = request.getParameter("uname");
 		String Password = request.getParameter("pass");	
 	%>
-	<form action = "delete" method = "post">
+	<form action = "deleteCus" method = "post">
 <div class="ScriptTop">
     <div class="rt-container">
         <div class="col-rt-4" id="float-right">
