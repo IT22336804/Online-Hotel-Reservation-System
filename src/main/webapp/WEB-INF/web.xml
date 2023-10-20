@@ -49,6 +49,64 @@
 		<servlet-name>updateBook</servlet-name>
 		<url-pattern>/updateBook</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.customer.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>profile</servlet-name>
+		<servlet-class>com.customer.UserProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>profile</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>com.customer.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+    <servlet>
+    	<servlet-name>customerinsert </servlet-name>
+    	<servlet-class>com.customer.CustomerInsert</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>customerinsert</servlet-name>
+    	<url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+    	<servlet-name>customerupdate </servlet-name>
+    	<servlet-class>com.customer.UpdateCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>customerupdate</servlet-name>
+    	<url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    
+    	<servlet>
+    	<servlet-name>deletecustomer </servlet-name>
+    	<servlet-class>com.customer.DeleteCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>deletecustomer</servlet-name>
+    	<url-pattern>/delete</url-pattern>
+    </servlet-mapping>
 		 
 </web-app>
 
