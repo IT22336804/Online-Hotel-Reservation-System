@@ -108,6 +108,44 @@
     	<servlet-name>deletecustomer</servlet-name>
     	<url-pattern>/delete</url-pattern>
     </servlet-mapping>
+    
+    	<servlet>
+		<servlet-name>inquiry</servlet-name>
+		<servlet-class>com.Inquiry.inquiryinsert</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>inquiry</servlet-name>
+		<url-pattern>/inq</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>inquiryDetails</servlet-name>
+		<servlet-class>com.Inquiry.InquiryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>inquiryDetails</servlet-name>
+		<url-pattern>/inqde</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateInquiry</servlet-name>
+		<servlet-class>com.Inquiry.UpdateInquiryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateInquiry</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>deleteInquiry</servlet-name>
+		<servlet-class>com.Inquiry.DeleteInquiryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteInquiry</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
 		 
 </web-app>
 
