@@ -47,7 +47,7 @@
 		String userName = request.getParameter("uname");
 		String Password = request.getParameter("pass");	
 	%>
-	<form action = "update" method = "post">
+	<form action = "updateCus" method = "post">
 <div class="ScriptTop">
     <div class="rt-container">
         <div class="col-rt-4" id="float-right">
