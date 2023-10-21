@@ -5,11 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Create account</title>
+ 
 <script src = "CustomerScript.js"></script>
 <style>
-body {
+		body {
             font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
+           /* background-color: #f1f1f1;*/
+          	background: -webkit-linear-gradient(to right, #CCCCCC, #666666);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #CCCCCC, #666666);
+           
         }
 
         form {
@@ -64,44 +68,44 @@ body {
 		
 	<form action = "insert" method = "post">
 		Name <input type = "text" name = "name" value="${param.name}"><br>
-		Email 
+		Email <input type = "text" name = "email"value="${param.email}"><br>
 		<%-- Display email validation error if it exists --%>
-<% if (request.getAttribute("emailError") != null) { %>
-    <div style="color: red;">
-        <p>${emailError}</p>
-    </div>
-<% } %>
+			<% if (request.getAttribute("emailError") != null) { 
+				%>
+    				<div style="color: red;">
+        				<p>${emailError}</p>
+    				</div>
+				<% } 
+			%>
 		
-		<input type = "text" name = "email"value="${param.email}"><br>
+		<%-- Display phone number validation error if it exists --%>
+			<% if (request.getAttribute("phoneError") != null) { 
+				%>
+    				<div style="color: red;">
+        				<p>${phoneError}</p>
+    				</div>
+				<% } 
+			%>
 		
-				<%-- Display phone number validation error if it exists --%>
-<% if (request.getAttribute("phoneError") != null) { %>
-    <div style="color: red;">
-        <p>${phoneError}</p>
-    </div>
-<% } %>
-		
-		Phone
-		<input type = "text" name = "phone" value="${param.phone}"maxlength = "10"><br>
+		Phone<input type = "text" name = "phone" value="${param.phone}"maxlength = "10"><br>
 		User Name <input type = "text" name = "uid"value="${param.uid}"><br>
-		
-		
-		Password
+		Password<input type = "password" name = "psw"><br>
 		 <%-- Display password complexity error if it exists --%>
-        <% if (request.getAttribute("passwordError") != null) { %>
-            <div style="color: red;">
-                <p>${passwordError}</p>
-            </div>
-        <% } %>
-		
-		 <input type = "password" name = "psw"><br>
-		
-			<%-- Display error message if it exists --%>
-    <% if (request.getAttribute("error") != null) { %>
-        <div style="color: red;">
-            <p>${error}</p>
-        </div>
-    <% } %> 
+        	<% if (request.getAttribute("passwordError") != null) { 
+        		%>
+            		<div style="color: red;">
+                		<p>${passwordError}</p>
+            		</div>
+       			 <% } 
+       		%>
+		<%-- Display error message if it exists --%>
+    		<% if (request.getAttribute("error") != null) {
+    			%>
+        			<div style="color: red;">
+            			<p>${error}</p>
+        			</div>
+    			<% } 
+    		%> 
 		
 		
 		<label for="confirmCheckbox">

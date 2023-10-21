@@ -80,8 +80,8 @@ h2 span {
 	display:inline-block;
 }
 .ScriptTop li a {
-    background: #6a4aed none repeat scroll 0 0;
-    /*background: #FFFF00 none repeat scroll 0 0;*/
+   /* background: #6a4aed none repeat scroll 0 0;*/
+   	 background: #B4975A none repeat scroll 0 0;						
     color: #fff;
     display: inline-block;
     font-size: 14px;
@@ -116,7 +116,8 @@ h2 span {
 	font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-    color: #6a4aed;
+    /*color: #6a4aed;*/
+    color:mix(#B4975A, black, 50%);
     font-size: 26px;
     font-weight: 700;
     margin: 0;
@@ -147,20 +148,6 @@ h2 span {
     margin-top: 5px;
 }
 
-
-
-
-/* ******************************************************
-	Live Demo
-*********************************************************/
-
-
-
-
-
-/* ******************************************************
-	Responsive Grids
-*********************************************************/
 
 .rt-container {
 	margin: 0 auto;

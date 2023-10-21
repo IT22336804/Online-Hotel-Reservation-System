@@ -3,8 +3,8 @@
 
 body {
     background: #444444;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #B4975A, #444444);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #B4975A, #444444); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   	background: -webkit-linear-gradient(to right, #CCCCCC, #666666);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #CCCCCC, #666666);
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;

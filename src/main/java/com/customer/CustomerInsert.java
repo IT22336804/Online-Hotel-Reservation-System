@@ -53,7 +53,7 @@ public class CustomerInsert extends HttpServlet {
 	 // Validate phone number (allow only digits and ensure it has a maximum length of 10)
 	    if (!phone.matches("\\d{10}")) {
 	        // Handle phone number validation error
-	        request.setAttribute("error", "**Invalid phone number. Please enter a valid phone number Ex:(07******90).");
+	        request.setAttribute("error", "**Invalid phone number. Please enter a valid phone number Ex:(07********).");
 	        request.setAttribute("name", name);
 	        request.setAttribute("email", email);
 	        request.setAttribute("phone", phone);
