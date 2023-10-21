@@ -2,9 +2,56 @@
 
 body{
 	background-color:lightgrey;
+	font-family: 'Poppins', sans-serif;
 }
 .detcont{
-	background-color: white;
+	
+	background-image: linear-gradient(to right,#878787 , #c3b28f);
 	margin-bottom: 10px;
 	width: auto;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	transition: 0.3s;
+	text-align: center;
+	
 }
+.detcont:hover{
+	
+	box-shadow: 3px 3px 6px black;
+	
+}
+
+.i,.s,.m{
+	font-weight: bold;
+}
+
+.buttond,
+.buttonu{
+  border: none;
+  color: white;
+  height: auto;
+  width:auto;
+  padding: 4px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c3b28f; 
+  color: black; 
+  border: 2px solid #444444;
+  border-radius: 2px;
+  
+}
+
+.buttond:hover,
+.buttonu:hover {
+  background-color: #B4975A;
+  color: white;
+}
+
+

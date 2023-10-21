@@ -11,7 +11,7 @@
 
 	 <nav>
        <div class="logo">
-           <img src="images\W - Tech.png" alt="Company Logo">
+           <img src="images/hlogo1.png" alt="Company Logo">
        </div>
        
            <div class="menu">

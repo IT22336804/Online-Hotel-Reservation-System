@@ -15,7 +15,7 @@
 
  <nav>
        <div class="logo">
-           <img src="images\W - Tech.png" alt="Company Logo">
+           <img src="images/hlogo1.png" alt="Company Logo">
        </div>
        
            <div class="menu">
@@ -47,11 +47,10 @@
 	<div class="inqForm">   
 	    <form action="inq" method="post">
 	    
-	    		Inquiry  Subject:<br><input type = "text" name ="subject" class="sub-input" ><br>
+	    		Inquiry  Subject:<br><input type = "text" name ="subject" class="sub-input" required ><br>
 	    		<label for="message">Inquiry Message:</label><br>
 	    		
-				<textarea id="message" name="message" rows="4" cols="50" class="msg-input">Enter text here...
-				</textarea><br>
+				<textarea id="message" name="message" rows="4" cols="50" class="msg-input" required placeholder="Enter text here..."></textarea><br>
 	    	    
 	    	    <input type = "submit" name = "submit" value = "Send Inquiry" class="button button1">
 	    		
