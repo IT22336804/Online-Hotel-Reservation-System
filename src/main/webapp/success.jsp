@@ -5,7 +5,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Success</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="header-footer.css">
+	<style>
+		h1 , a{
+			text-align:center;
+			
+		}
+	</style>
 </head>
 <body>
 
@@ -25,7 +32,7 @@
            <a class="signup-button" href="php\SignUp.php">Signup</a>
        </div>
     </nav>
-
+	
 	<h1>Success</h1>
 	<a href = "login.jsp">redirect</a>
 	

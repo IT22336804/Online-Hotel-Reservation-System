@@ -80,7 +80,7 @@
         <div class="card shadow-sm">
           <div class="card-header bg-transparent text-center">
             <img class="profile_img" src="https://source.unsplash.com/600x300/?student" alt="student dp">
-            <h3> ${cus.name}</h3>
+            <h3><%=name%></h3>
           </div>
           <div class="card-body">
             <p class="mb-0"><strong class="pr-1">User ID:</strong><input type = "text" name = "cusid" value = "<%=id %>"readonly></p>
@@ -145,9 +145,11 @@
 
           <div  class="ScriptTop">
             <ul>
-                <li><a><button type = "submit" id = "submitButton "name = "submit" value="Delete My Data" disabled>Delete Profile</button></a></li>   
+                <li><a><button type = "submit" name = "submit" value = "Sign Up" id="submitButton"disabled>Delete my profile</button></a></li>   
             </ul>
         </div>
+        
+		
         	</div>
       	</div>
     </div>
