@@ -32,6 +32,21 @@
   }
 }
 
+		function showTerms() {
+        document.getElementById('termsModal').style.display = 'block';
+    }
+
+    // Function to hide terms and conditions modal
+    function hideTerms() {
+        document.getElementById('termsModal').style.display = 'none';
+    }
+	// Event listener to hide modal when clicking outside of it
+    window.onclick = function(event) {
+        var modal = document.getElementById('termsModal');
+        if (event.target == modal) {
+            hideTerms();
+        }
+    };
 
 /**
  * 
