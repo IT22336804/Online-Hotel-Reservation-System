@@ -12,13 +12,14 @@ body{
 	border-style: solid;
 	border-color: black;
 	border-width: 2px;
-	transition: 0.3s;
+	transition: 0.5s;
 	text-align: center;
 	
 }
 .detcont:hover{
 	
 	box-shadow: 3px 3px 6px black;
+	transform: scale(1.2);
 	
 }
 

@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/inquiryinsert")
@@ -20,10 +21,12 @@ public class inquiryinsert extends HttpServlet {
 		
 		String subject = request.getParameter("subject");
 		String message = request.getParameter("message");
+		HttpSession session = request.getSession();
+		int uid = (int)session.getAttribute("loggedUserId");
 		
 		boolean isTrue = true;
 		
-		isTrue = inquiryDB.insertinquiry(subject, message);
+		isTrue = inquiryDB.insertinquiry(subject, message, uid);
 		
 		if(isTrue = true) {
 			RequestDispatcher dis = request.getRequestDispatcher("inqsuccess.jsp");
