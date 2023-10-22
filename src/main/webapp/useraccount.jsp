@@ -6,10 +6,10 @@
 <head>
 <meta charset="ISO-8859-1" name="viewport" content="width=device-width, initial-scale=1.0">
 <title>User Profile</title>
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-
+ <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="CustomerDemo.css" />
 <link rel="stylesheet" href="CustomerStyle.css">
@@ -18,7 +18,7 @@
 	
  <nav>
        <div class="logo">
-           <img src="images\W - Tech.png" alt="Company Logo">
+           <img src="images/hlogo1.png" alt="Company Logo">
        </div>
        
            <div class="menu">
