@@ -24,6 +24,9 @@ public class inquiryinsert extends HttpServlet {
 		HttpSession session = request.getSession();
 		int uid = (int)session.getAttribute("loggedUserId");
 		
+		HttpSession session = request.getSession();
+		int uid = (int)session.getAttribute("loggedUserId");
+		
 		boolean isTrue = true;
 		
 		isTrue = inquiryDB.insertinquiry(subject, message, uid);

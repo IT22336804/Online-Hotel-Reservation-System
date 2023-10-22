@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="header-footer.css">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -28,9 +29,14 @@
     </nav>
     
     
-    <div>
+    <div class="section-1">
+    	<img src="images/indexImage1.jpg">
+    </div>
+    
+    
+    <div class="form-div">
     	<form action="find" method="get">
-    		<div>
+    		<div class="guest-div">
     			<label for="guest">Guest:</label><br>
     			<select name="guest" id="guest" required>
     				<option value="" selected disabled hidden>Select an Option</option> 
@@ -39,15 +45,15 @@
     				<option value="3">3 guests</option>
     			</select>
     		</div>
-    		<div>
+    		<div class="start-date-div">
     			<label for="startDate">Check-in:</label><br>
     			<input type="date" name="startDate" id="startDate" min="2023-10-23" required >
     		</div>
-    		<div>
+    		<div class="end-date-div">
     			<label for="endDate">Check-out:</label><br>
     			<input type="date" name="endDate" id="endDate" min="2023-10-23" required>
     		</div>
-    		<div>
+    		<div class="search-rooms-button">
     			<input type="submit" name="submit" id="submit" value="Search Rooms">
     		</div>
     		

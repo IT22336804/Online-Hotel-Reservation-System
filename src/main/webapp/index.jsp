@@ -16,10 +16,12 @@
        
            <div class="menu">
                <a class="menu-item" href="#">Home</a>
+
                <a class="menu-item" href="#">Find Rooms</a>
                <a class="menu-item" href="AboutUs.jsp">About Us</a>
                <a class="menu-item" href="profile">Profile</a>
                 <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
+
                
            </div>
        

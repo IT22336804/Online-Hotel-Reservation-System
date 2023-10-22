@@ -21,11 +21,11 @@ public class UpdateReservationServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int resId = Integer.parseInt(request.getParameter("reserveId"));
+		Integer resId = Integer.parseInt(request.getParameter("reserveId"));
 		String updatedStart = request.getParameter("startDate");
 		String updatedEnd = request.getParameter("endDate");
 		double price = Double.parseDouble(request.getParameter("reservePrice"));
-		int updatedGuests = Integer.parseInt(request.getParameter("guest"));
+		Integer updatedGuests = Integer.parseInt(request.getParameter("guest"));
 		
 		boolean ret = ReservationDB.updateReservation(resId, updatedStart, updatedEnd, price, updatedGuests);
 		

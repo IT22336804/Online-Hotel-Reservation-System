@@ -50,7 +50,16 @@
 		<url-pattern>/updateBook</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
+		<servlet-name>deleteBook</servlet-name>
+		<servlet-class>reservations.DeleteReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteBook</servlet-name>
+		<url-pattern>/deleteBook</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>login</servlet-name>
 		<servlet-class>com.customer.LoginServlet</servlet-class>
 	</servlet>
