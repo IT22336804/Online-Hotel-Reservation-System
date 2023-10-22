@@ -17,7 +17,7 @@ public class inquiryDB {
 	
 	
 	
-	public static boolean insertinquiry(String subject, String message) {
+	public static boolean insertinquiry(String subject, String message, int uid) {
 		
 		
 		
@@ -26,7 +26,7 @@ public class inquiryDB {
 		
 		try{
 			
-			String sql = "insert into inquiry (inqID,subject,message) values (0,'" +subject+"','" +message+"') ";
+			String sql = "insert into inquiry (inqID, cid, subject, message) values (0, '"+uid+"','" +subject+"','" +message+"')";
 			int rs = DBConnect.getDBConnection().executeUpdate(sql);
 			
 			if(rs > 0) {
@@ -52,14 +52,14 @@ public class inquiryDB {
 
 		
 	
-public static List<inquiry> getinquiry(){
+public static List<inquiry> getinquiry(int uid){
 	
 		
 		ArrayList<inquiry> inq = new ArrayList<>();
 		
 		try {
 		
-			String sql = "select * from inquiry";
+			String sql = "select * from inquiry where cid = '"+uid+"'";
 		    rs = DBConnect.getDBConnection().executeQuery(sql);
 			
 			while(rs.next()) {

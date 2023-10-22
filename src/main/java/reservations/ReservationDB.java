@@ -9,13 +9,13 @@ import Configurations.DBConnect;
 public class ReservationDB {
 	
 	private static ResultSet rs;
-		
+	private static String sql;
 	
-	public static boolean makeReservation(int rid, String startDate, String endDate, double pay, int guests) {
+	public static boolean makeReservation(int rid, String startDate, String endDate, double pay, int guests, int uid) {
 		
 		boolean isSuccess = false;
 		
-		String sql = "INSERT INTO reservation VALUES (0, '"+startDate+"', '"+endDate+"', datediff('"+endDate+"', '"+startDate+"') * '"+pay+"', '"+guests+"', '"+rid+"', 1)";
+		sql = "INSERT INTO reservation VALUES (0, '"+startDate+"', '"+endDate+"', datediff('"+endDate+"', '"+startDate+"') * '"+pay+"', '"+guests+"', '"+rid+"', '"+uid+"')";
 		try {
 			int ret = DBConnect.getDBConnection().executeUpdate(sql);
 			
@@ -33,11 +33,11 @@ public class ReservationDB {
 	}
 	
 	
-	public static ArrayList<Reservation> viewReservation() {
+	public static ArrayList<Reservation> viewReservation(int uid) {
 		
 		ArrayList<Reservation> reservs = new ArrayList<>();
 		
-		String sql = "SELECT * FROM reservation re, room ro WHERE re.roomID = ro.rid AND cusID = 1";
+		sql = "SELECT * FROM reservation re, room ro WHERE re.roomID = ro.rid AND cusID = '"+uid+"'";
 		
 		try {
 			
@@ -80,7 +80,7 @@ public class ReservationDB {
 		
 		boolean isSuccess = false;
 		
-		String sql = "UPDATE reservation SET startDate = '"+sDate+"', endDate = '"+eDate+"', payment = datediff('"+eDate+"', '"+sDate+"') * '"+price+"', noOfGuest = '"+guests+"' WHERE resID = '"+resId+"'";
+		sql = "UPDATE reservation SET startDate = '"+sDate+"', endDate = '"+eDate+"', payment = datediff('"+eDate+"', '"+sDate+"') * '"+price+"', noOfGuest = '"+guests+"' WHERE resID = '"+resId+"'";
 		try {
 			int ret = DBConnect.getDBConnection().executeUpdate(sql);
 			
@@ -94,6 +94,30 @@ public class ReservationDB {
 			e.printStackTrace();
 		}
 		
+		
+		return isSuccess;
+		
+	}
+	
+	
+	public static boolean deleteReservation(int rID) {
+		 
+		
+		boolean isSuccess = false;
+		
+		sql = "DELETE FROM reservation WHERE resID = '"+rID+"'";
+		
+		try {
+			int ret = DBConnect.getDBConnection().executeUpdate(sql);
+			
+			if(ret > 0) {
+				isSuccess = true;
+			}
+			
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 		return isSuccess;
 		

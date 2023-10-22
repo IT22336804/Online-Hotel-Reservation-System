@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/ReservationServlet")
 public class ReservationServlet extends HttpServlet {
@@ -21,7 +22,11 @@ public class ReservationServlet extends HttpServlet {
 		String end = request.getParameter("bookEnd");
 		int guests = Integer.parseInt(request.getParameter("bookGuests"));
 		
-		boolean ret = ReservationDB.makeReservation(rid, start, end, price, guests);
+		HttpSession session = request.getSession();
+		int uid = (int) session.getAttribute("loggedUserId");
+		 
+		
+		boolean ret = ReservationDB.makeReservation(rid, start, end, price, guests, uid);
 		
 		if(ret == true) {
 			RequestDispatcher dis = request.getRequestDispatcher("reservs");

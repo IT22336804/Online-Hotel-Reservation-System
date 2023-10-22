@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/inquiryServlet")
@@ -22,7 +23,10 @@ public class InquiryServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		List<inquiry> inquiryList = inquiryDB.getinquiry();
+		HttpSession session = request.getSession();
+		int uid = (int)session.getAttribute("loggedUserId");
+		
+		List<inquiry> inquiryList = inquiryDB.getinquiry(uid);
 		request.setAttribute("inquiryList",inquiryList );
 		request.getRequestDispatcher("inquiryDetails.jsp").forward(request,response);
 		
@@ -34,9 +38,6 @@ public class InquiryServlet extends HttpServlet {
 	}
 
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		doGet(request, response);
-	}
+
 
 }

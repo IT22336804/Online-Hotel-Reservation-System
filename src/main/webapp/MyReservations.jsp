@@ -16,7 +16,7 @@
 	     </div>
 	     
 	     <div class="menu">
-	         <a class="menu-item" href="#">Home</a>
+	         <a class="menu-item" href="indexLogged.jsp">Home</a>
 	         <a class="menu-item" href="#">Find Rooms</a>
 	         <a class="menu-item" href="#">About Us</a>
 	         <a class="menu-item" href="reservs" style="color: white;">My Reservations</a>
@@ -46,7 +46,7 @@
 					
 			<div>
 			
-				<c:url value="UpdateReservation.jsp" var="update">
+				<c:url value="UpdateReservation.jsp" var="updateRes">
 					<c:param name="resId" value="${resId}"/>
 					<c:param name="resPrice" value="${resPrice}"/>
 					<c:param name="startD" value="${startD}"/>
@@ -54,10 +54,19 @@
 					
 				</c:url>
 			
-				<a href="${update}">Update</a>
+				<a href="${updateRes}">Update</a>
 			</div><br>
 			
-			<div><a href="#">Delete</a></div><br><br><br>
+			<div>
+			
+				<c:url value="deleteBook" var="deleteRes">
+					<c:param name="rId" value="${resId}"/>
+					
+				</c:url>
+			
+				<a href="${deleteRes}" onclick="return confirm('Are you sure you want to delete your reservation')">Delete</a>
+			
+			</div><br><br><br>
 			
 		</c:forEach>
 	</div>
