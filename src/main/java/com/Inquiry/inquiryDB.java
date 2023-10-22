@@ -17,16 +17,16 @@ public class inquiryDB {
 	
 	
 	
-	public static boolean insertinquiry(String subject, String message) {
+	public static boolean insertinquiry(String subject, String message,int uid) {
 		
 		
 		
 		
-
+		
 		
 		try{
 			
-			String sql = "insert into inquiry (inqID,subject,message) values (0,'" +subject+"','" +message+"') ";
+			String sql = "insert into inquiry (inqID, cid, subject, message) values (0, '"+uid+"' , '" +subject+"', '" +message+"')";
 			int rs = DBConnect.getDBConnection().executeUpdate(sql);
 			
 			if(rs > 0) {

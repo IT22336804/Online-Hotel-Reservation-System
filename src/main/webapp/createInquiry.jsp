@@ -13,7 +13,7 @@
 
 <body>
 
- <nav>
+  <nav>
        <div class="logo">
            <img src="images/hlogo1.png" alt="Company Logo">
        </div>
@@ -21,7 +21,10 @@
            <div class="menu">
                <a class="menu-item" href="#">Home</a>
                <a class="menu-item" href="#">Find Rooms</a>
-               <a class="menu-item" href="#">About Us</a>
+               <a class="menu-item" href="AboutUs.jsp">About Us</a>
+               <a class="menu-item" href="profile">Profile</a>
+                <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
+               
            </div>
        
        <div class="signup-login">
@@ -29,7 +32,6 @@
            <a class="signup-button" href="php\SignUp.php">Signup</a>
        </div>
     </nav>
-
 
     
      <div class="header">
@@ -77,11 +79,11 @@
             <table>
                 <tr>
                   <td><strong>Address </strong></td>
-                  <td>eChannelling PLC, No: 222, K A L Rathnayake Mawatha, Colombo 1, Sri Lanka.</td>
+                  <td>Regency Hotel, No: 222, Victoria Road, Colombo 03, Sri Lanka.</td>
                 </tr>
                 <tr>
                   <td><strong>Email address</strong></td>
-                  <td>contact@echanneling.com</td>
+                  <td>contact@regencyh69.com</td>
                 </tr>
                 <tr>
                   <td><strong>Phone number</strong></td>
