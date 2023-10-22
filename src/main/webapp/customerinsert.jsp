@@ -3,73 +3,72 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CustomerInsert.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    
+    <script src = "CustomerScript.js"></script>
 <meta charset="ISO-8859-1">
-<title>Create account</title>
+	<title>Create account</title>
  
-<script src = "CustomerScript.js"></script>
-<style>
-		body {
-            font-family: Arial, sans-serif;
-           /* background-color: #f1f1f1;*/
-          	background: -webkit-linear-gradient(to right, #CCCCCC, #666666);  /* Chrome 10-25, Safari 5.1-6 */
-			background: linear-gradient(to right, #CCCCCC, #666666);
-           
-        }
-
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-            border-radius: 5px;
-             background: #fff;
- 			 box-sizing: border-box;
- 
-        }
-
-        input[type="text"],
-        input[type="password"]{
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        input[type="submit"] ,button{
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-             opacity: 0.5;
-            
-        }
-
-        input[type="submit"],button:hover {
-            background-color: #0056b3;
-        }
-        .headers{
-        	text-align:center;
-        	font-family:cursive;
-        }
-  
-</style>
 </head>
-<body>	<div class = "headers">
-		<h1>Join Puriton Family</h1>
-		<h2>Sign Up Now</h2>
-		</div>
-		
-	
-		
-		
-	<form action = "insert" method = "post">
-		Name <input type = "text" name = "name" value="${param.name}"><br>
-		Email <input type = "text" name = "email"value="${param.email}"><br>
-		<%-- Display email validation error if it exists --%>
+<body>	
+
+
+
+	<nav>
+       <div class="logo">
+           <img src="images/hlogo1.png" alt="Company Logo">
+       </div>
+       
+           <div class="menu">
+               <a class="menu-item" href="login.jsp">Home</a>
+               <a class="menu-item" href="#">Find Rooms</a>
+               <a class="menu-item" href="#">About Us</a>
+               <a class="menu-item" href="#">Profile</a>
+           </div>
+       
+       <div class="signup-login">
+           <a class="login-button" href="php\loginUser.php">Login</a>
+           <a class="signup-button" href="php\SignUp.php">Signup</a>
+		   <a class="logout-button" href="">Logout</a>
+           
+       </div>
+    </nav>
+
+
+
+
+
+	 <div class="container">
+        <form action="insert" method="post" class="sign-form" id="sign-form" autocomplete="on">
+            <h1 class="form-title">Sign Up</h1>
+            <p class="form-caption">Creating Memories, One Stay at a Time!</p>
+
+
+            <label for="fullname">Full Name<span class="star-required" >*</span></label>
+            <input type="text" name="name" id="fullname" value="${param.name}"placeholder="Full Name" autofocus >
+
+            <label for="email">Email<span class="star-required">*</span></label>
+            <input type="text" name="email" id="email" value="${param.email}"placeholder="mail@domain.com">
+
+            <label for="text">Phone Number<span class="star-required">*</span></label>
+            <input type="text" name="phone" id="phone"value="${param.phone}" maxlength = "10"placeholder="07********">
+
+            <label for="username">User Name<span class="star-required" >*</span></label>
+            <input type="text" name="uid" id="username" value="${param.uid}"  >
+
+            <label for="password">Password<span class="star-required">*</span></label>
+            <input type="password" name="psw" id="password"  autofocus >
+           
+            <br>
+
+
+
+            <%-- Display email validation error if it exists --%>
 			<% if (request.getAttribute("emailError") != null) { 
 				%>
     				<div style="color: red;">
@@ -86,11 +85,8 @@
     				</div>
 				<% } 
 			%>
-		
-		Phone<input type = "text" name = "phone" value="${param.phone}"maxlength = "10"><br>
-		User Name <input type = "text" name = "uid"value="${param.uid}"><br>
-		Password<input type = "password" name = "psw"><br>
-		 <%-- Display password complexity error if it exists --%>
+
+             <%-- Display password complexity error if it exists --%>
         	<% if (request.getAttribute("passwordError") != null) { 
         		%>
             		<div style="color: red;">
@@ -106,18 +102,50 @@
         			</div>
     			<% } 
     		%> 
+
+
+
+            <input type="checkbox" id="confirmCheckbox"  name="enableButtonCheckbox" onclick="enableButton()">
+            <p class="sentence-agree">I agree to the <a >Terms & Conditions</a></p>
+
+
+
+            <input type="submit" value="Sign Up" id="submitButton"disabled>
+            
+
+            
+        </form>
+    </div>
+    
+     <footer class="footer">
+       <div class="footer-top">
+           <div class="footer-section">
+               <h3>SUPPORT</h3>
+               <p>Email: sample@example.com</p>
+           </div>
+           <hr class="footer-line">
+           <div class="footer-section">
+               <h3>Contact Us</h3>
+               <p>Address: 123 Street, City, Country</p>
+               <p>Phone: +1234567890</p>
+               <p>Fax: +1234567890</p>
+           </div>
+       </div>
+       <hr class="footer-line">
+       <div class="footer-bottom">
+           <p>Copyright&copy; 2023 W-Tech. All rights reserved.</p>
+           <div class="social-media-links">
+               <a href="#"><img src="facebook.png" alt="Facebook"></a>
+               <a href="#"><img src="twitter.png" alt="Twitter"></a>
+               <a href="#"><img src="instagram.png" alt="Instagram"></a>
+           </div>
+           <div class="footer-buttons">
+               <a href="#">Privacy Policy</a>
+               <a href="#">Terms and Conditions</a>
+           </div>
+       </div>
+   </footer>
 		
-		
-		<label for="confirmCheckbox">
-      			<input type="checkbox" id="confirmCheckbox"  name="enableButtonCheckbox"onclick="enableButton()">
-      				I accept and agree to abide by the terms and conditions outlined. Checking this box confirms my understanding and commitment.
-    			</label>
-		<p>
-			<button type = "submit" name = "submit" value = "Sign Up" id="submitButton"disabled>Register</button>
-		</p>		
-	</form>
-	
-	
 	
 </body>
 </html>

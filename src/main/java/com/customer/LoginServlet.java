@@ -51,47 +51,5 @@ public class LoginServlet extends HttpServlet {
 
 }
 
-// LoginServlet.java
-
-//@WebServlet("/LoginServlet")
-//public class LoginServlet extends HttpServlet {
-//    private static final long serialVersionUID = 1L;
-//
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//
-//        String username = request.getParameter("uid");
-//        String password = request.getParameter("pass");
-//
-//        // Check if the form was submitted with empty fields
-//        if (username.isEmpty() || password.isEmpty()) {
-//            // Handle validation error
-//            request.setAttribute("error", "Username and password are required");
-//            RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
-//            dis.forward(request, response);
-//            return;
-//        }
-//
-//        try {
-//            boolean isValidUser = CustomerDBUtil.validateCredentials(username, password);
-//
-//            if (isValidUser) {
-//                // Set a user attribute in the session to indicate that the user is logged in
-//                request.getSession().setAttribute("user", username);
-//
-//                // Forward to the user account page or wherever you want to redirect after successful login
-//                RequestDispatcher dis = request.getRequestDispatcher("useraccount.jsp");
-//                dis.forward(request, response);
-//            } else {
-//                // Handle invalid credentials error
-//                request.setAttribute("error", "Incorrect username or password");
-//                RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
-//                dis.forward(request, response);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//}
 
 

@@ -7,7 +7,7 @@
 <title>Home</title>
 <style>
 body{
-	background-image:url("edvin-johansson-rlwE8f8anOc-unsplash.jpg");
+	background-image:url("images/edvin-johansson-rlwE8f8anOc-unsplash.jpg");
 	background-size:cover;
 }
 h1{
