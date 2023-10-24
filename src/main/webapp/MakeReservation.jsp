@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Find Rooms</title>
 <link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="reservations.css">
 	 <script src="reserve.js"></script>
@@ -32,33 +32,38 @@
 	     </div>
 	</nav>
 	
-	
-	<div>
-    	<form action="find" method="get">
-    		<div>
-    			<label for="guest">Guest:</label><br>
-    			<select name="guest" id="guest" required>
-    				<option value="" selected disabled hidden>Select an Option</option> 
-    				<option value="1">1 guest</option>
-    				<option value="2">2 guests</option>
-    				<option value="3">3 guests</option>
-    			</select>
-    		</div>
-    		<div>
-    			<label for="startDate">Check-in:</label><br>
-    			<input type="date" name="startDate" id="startDate" min="2023-10-23" value="${startDate}" required >
-    		</div>
-    		<div>
-    			<label for="endDate">Check-out:</label><br>
-    			<input type="date" name="endDate" id="endDate" min="2023-10-23" value="${endDate}" required>
-    		</div>
-    		<div>
-    			<input type="submit" name="submit" id="submit" value="Search Rooms">
-    		</div>
-    		
-    	</form>
-    </div>
-	  
+	<div class="header-section">
+		<p>Rooms</p>
+	    <div class="form-div">
+	    	<form action="find" method="get">
+	    		<div class="form-details">
+		    		<div class="guest-div">
+		    			<label for="guest">Guests: </label>
+		    			<select name="guest" id="guest" required>
+		    				<option value="" selected disabled hidden>Select an Option</option> 
+		    				<option value="1">1 guest</option>
+		    				<option value="2">2 guests</option>
+		    				<option value="3">3 guests</option>
+		    			</select>
+		    		</div>
+		    		
+		    		<div class="start-date-div">
+		    			<label for="startDate">Check-in: </label>
+		    			<input type="date" name="startDate" id="startDate" min="2023-10-23" value="${startDate}" required >
+		    		</div>
+		    		
+		    		<div class="end-date-div">
+		    			<label for="endDate">Check-out: </label>
+		    			<input type="date" name="endDate" id="endDate" min="2023-10-23" value="${endDate}" required>
+		    		</div>
+		    	</div>
+	    		<div class="search-rooms-button">
+	    			<input type="submit" name="submit" id="submit" value="Search Rooms">
+	    		</div>
+	    		
+	    	</form>
+	    </div>
+	  </div>
 	  
 	
 		
