@@ -4,7 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Inquiry Unsuccess</title>
+<style>
+body{
+	background-image: linear-gradient(to right,#878787 , #c3b28f);
+}
+</style>
 </head>
 <body>
 
