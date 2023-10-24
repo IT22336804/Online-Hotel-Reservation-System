@@ -15,7 +15,7 @@ h1{
 	color:yellow;
 	/*background-color:yellow;*/
 	font-size:50px;
-	font-family:cursive;
+	font-family:lato;
 	text-shadow:
         -1px -1px 0 #98a4c0, /* Top-left shadow (lighter shade) */
         1px -1px 0 #98a4c0,  /* Top-right shadow (lighter shade) */
@@ -26,7 +26,7 @@ h1{
 .name,.password , .newuser{
 	color:lightgreen;
 	font-weight:strong;
-	font-family:cursive;
+	font-family:lato;
 	
 }
 #newuser{
@@ -70,7 +70,7 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family:cursive;
+  font-family:lato;
 }
 
 /*  Hover effect */
@@ -99,7 +99,7 @@ input[type="submit"]:focus {
 
 	 
 
-	<h1>The Puriton</h1>
+	<h1>Regency Hotel</h1>
 	<div class = "container">
 	
 	<form action = "log" method = "post">

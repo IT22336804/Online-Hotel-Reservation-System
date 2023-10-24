@@ -21,8 +21,7 @@ public class inquiryinsert extends HttpServlet {
 		
 		String subject = request.getParameter("subject");
 		String message = request.getParameter("message");
-		HttpSession session = request.getSession();
-		int uid = (int)session.getAttribute("loggedUserId");
+		
 		
 		HttpSession session = request.getSession();
 		int uid = (int)session.getAttribute("loggedUserId");

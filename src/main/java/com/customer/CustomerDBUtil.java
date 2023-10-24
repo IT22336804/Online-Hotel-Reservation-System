@@ -12,31 +12,18 @@ public class CustomerDBUtil {
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 	
-	public static /*List<Customer>*/int validate(String username , String password){
-		
-//		ArrayList<Customer>cus = new ArrayList<>();
+	public static int validate(String username , String password){
 		
 		int id = 0;
-		try {
-			
+		try {	
 			String sql = "select id from customer where username = '"+username+"' and password = '"+password+"'";
 			
 			rs = DBConnect.getDBConnection().executeQuery(sql);
 			
-			
 			if(rs.next()) {
-				
 				 id = rs.getInt(1);
-//				String name = rs.getString(2);
-//				String email = rs.getString(3);
-//				String phone = rs.getString(4);
-//				String userU = rs.getString(5);
-//				String passU = rs.getString(6);
-				
-//				Customer c = new Customer( id , name , email , phone , userU , passU);
-//				cus.add(c);
-			}
-			
+
+			}	
 		}
 		catch(Exception e) {
 			e.printStackTrace();

@@ -73,7 +73,7 @@
           <div class="col-rt-12">
               <div class="Scriptcontent">
               
-<!-- Student Profile -->
+
 	
 <div class="student-profile py-4">
   <div class="container">
