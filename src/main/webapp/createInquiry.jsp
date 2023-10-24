@@ -1,5 +1,6 @@
  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,12 +50,20 @@
 	<div class="inqForm">   
 	    <form action="inq" method="post">
 	    
-	    		Inquiry  Subject:<br><input type = "text" name ="subject" class="sub-input" required ><br>
+	    		Inquiry  Subject:<br><input type = "text" name ="subject" class="sub-input"><br>
 	    		<label for="message">Inquiry Message:</label><br>
 	    		
-				<textarea id="message" name="message" rows="4" cols="50" class="msg-input" required placeholder="Enter text here..."></textarea><br>
+				<textarea id="message" name="message" rows="4" cols="50" class="msg-input"  placeholder="Enter text here..."></textarea><br>
 	    	    
 	    	    <input type = "submit" name = "submit" value = "Send Inquiry" class="button button1">
+	    	    
+	    	    <%
+	    	    	if(request.getAttribute("inquiryError") != null){
+	    	    %>	
+	    	    		<p>${inquiryError}</p>
+	    	    <%		
+	    	    	}
+	    	    %>
 	    		
 	    </form><br>
   
