@@ -26,15 +26,14 @@
        
            <div class="menu">
                <a class="menu-item" href="login.jsp">Home</a>
-               <a class="menu-item" href="#">Find Rooms</a>
                <a class="menu-item" href="#">About Us</a>
-               <a class="menu-item" href="#">Profile</a>
+               
            </div>
        
        <div class="signup-login">
-           <a class="login-button" href="php\loginUser.php">Login</a>
-           <a class="signup-button" href="php\SignUp.php">Signup</a>
-		   <a class="logout-button" href="">Logout</a>
+           <a class="login-button" href="login.jsp">Login</a>
+           <a class="signup-button" href="customerinsert.jsp">Signup</a>
+		   
            
        </div>
     </nav>
@@ -50,7 +49,7 @@
 
 
             <label for="fullname">Full Name<span class="star-required" >*</span></label>
-            <input type="text" name="name" id="fullname" value="${param.name}"placeholder="Full Name" autofocus >
+            <input type="text" name="name" id="fullname" value="${param.name}"placeholder="Full Name">
 
             <label for="email">Email<span class="star-required">*</span></label>
             <input type="text" name="email" id="email" value="${param.email}"placeholder="mail@domain.com">
@@ -62,38 +61,12 @@
             <input type="text" name="uid" id="username" value="${param.uid}"  >
 
             <label for="password">Password<span class="star-required">*</span></label>
-            <input type="password" name="psw" id="password"  autofocus >
+            <input type="password" name="psw" id="password"   >
            
             <br>
 
 
 
-            <%-- Display email validation error if it exists --%>
-			<% if (request.getAttribute("emailError") != null) { 
-				%>
-    				<div style="color: red;">
-        				<p>${emailError}</p>
-    				</div>
-				<% } 
-			%>
-		
-		<%-- Display phone number validation error if it exists --%>
-			<% if (request.getAttribute("phoneError") != null) { 
-				%>
-    				<div style="color: red;">
-        				<p>${phoneError}</p>
-    				</div>
-				<% } 
-			%>
-
-             <%-- Display password complexity error if it exists --%>
-        	<% if (request.getAttribute("passwordError") != null) { 
-        		%>
-            		<div style="color: red;">
-                		<p>${passwordError}</p>
-            		</div>
-       			 <% } 
-       		%>
 		<%-- Display error message if it exists --%>
     		<% if (request.getAttribute("error") != null) {
     			%>
