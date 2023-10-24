@@ -28,8 +28,8 @@ public class inquiryinsert extends HttpServlet {
 		
 		String subject = request.getParameter("subject");
 		String message = request.getParameter("message");
+
 		try {
-			
 			validateInquiry(subject, message);
 			
 			HttpSession session = request.getSession();
