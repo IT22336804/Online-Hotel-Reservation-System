@@ -18,8 +18,10 @@
            <div class="menu">
                <a class="menu-item" href="indexLogged.jsp">Home</a>
                <a class="menu-item" href="MakeReservation.jsp">Find Rooms</a>
-               <a class="menu-item" href="#">About Us</a>
+               <a class="menu-item" href="profile">Profile</a>
                <a class="menu-item" href="reservs">My Reservations</a>
+               <a class="menu-item" href="AboutUsLogged.jsp">About Us</a>
+               <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
            </div>
        
        <div class="signup-login">
@@ -69,7 +71,7 @@
     	<div class="section-2-details">
     		<p class="Welcome-message">Welcome to Regency Hotel</p>
     		<p class="slogan">-You're one step closer to paradise</p>
-    		<a href="AboutUs.jsp"><button class="about-us-button">MORE ABOUT US</button></a>
+    		<a href="AboutUsLogged.jsp"><button class="about-us-button">MORE ABOUT US</button></a>
     	</div>
     	
     </div>
