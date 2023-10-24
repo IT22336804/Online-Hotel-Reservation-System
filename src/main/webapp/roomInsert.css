@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+
+body {
+  margin: 0;
+  margi-left: 150px;
+  font-family: "Lato", sans-serif;
+}
+
+.sidemenu {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidemenu a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidemenu a.active {
+  background-color: #444444;
+  color: white;
+}
+
+.sidemenu a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.form-div{
+	position: absolute;
+	top: 150px;
+	left: 700px;
+}
