@@ -20,17 +20,18 @@
        </div>
        
            <div class="menu">
-               <a class="menu-item" href="#">Home</a>
-               <a class="menu-item" href="#">Find Rooms</a>
-               <a class="menu-item" href="AboutUs.jsp">About Us</a>
+           <a class="menu-item" href="indexLogged.jsp">Home</a>
+               <a class="menu-item" href="MakeReservation.jsp">Find Rooms</a>
                <a class="menu-item" href="profile">Profile</a>
-                <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
+               <a class="menu-item" href="reservs">My Reservations</a>
+               <a class="menu-item" href="AboutUsLogged.jsp">About Us</a>
+               <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
                
            </div>
        
        <div class="signup-login">
-           <a class="login-button" href="php\loginUser.php">Login</a>
-           <a class="signup-button" href="php\SignUp.php">Signup</a>
+           <a class="login-button" href="logout">Logout</a>
+           
        </div>
     </nav>
 
@@ -55,15 +56,17 @@
 	    		
 				<textarea id="message" name="message" rows="4" cols="50" class="msg-input"  placeholder="Enter text here..."></textarea><br>
 	    	    
-	    	    <input type = "submit" name = "submit" value = "Send Inquiry" class="button button1">
-	    	    
-	    	    <%
+	    	        <%
 	    	    	if(request.getAttribute("inquiryError") != null){
 	    	    %>	
-	    	    		<p>${inquiryError}</p>
+	    	    		<p style="color:red;">${inquiryError}</p>
 	    	    <%		
 	    	    	}
 	    	    %>
+	    	    
+	    	    <input type = "submit" name = "submit" value = "Send Inquiry" class="button button1">
+	    	    
+	    	
 	    		
 	    </form><br>
   

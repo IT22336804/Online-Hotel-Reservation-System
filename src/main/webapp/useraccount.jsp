@@ -13,27 +13,31 @@
 <link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="CustomerDemo.css" />
 <link rel="stylesheet" href="CustomerStyle.css">
+
+<style type="text/css">
+
+</style>
+
 </head>
 <body>
 	
- <nav>
+ <nav style="font-family: lato; ,font-weight: ;">
        <div class="logo">
            <img src="images/hlogo1.png" alt="Company Logo">
        </div>
        
            <div class="menu">
-               <a class="menu-item" href="index.jsp">Home</a>
-               <a class="menu-item" href="#">Find Rooms</a>
-               <a class="menu-item" href="AboutUs.jsp">About Us</a>
+               <a class="menu-item" href="indexLogged.jsp">Home</a>
+               <a class="menu-item" href="MakeReservation.jsp">Find Rooms</a>
                <a class="menu-item" href="profile">Profile</a>
+               <a class="menu-item" href="reservs">My Reservations</a>
+               <a class="menu-item" href="AboutUsLogged.jsp">About Us</a>
                <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
            </div>
        
-       <div class="signup-login">
-           <a class="login-button" href="php\loginUser.php">Login</a>
-           <a class="signup-button" href="php\SignUp.php">Signup</a>
-		   <a class="logout-button" href="logout">Logout</a>
-           
+     <div class="signup-login">
+           <a class="login-button" href="logout">Logout</a>
+          
        </div>
     </nav>
 	
