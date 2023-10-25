@@ -10,26 +10,48 @@
 </head>
 <body>
 
-	 <nav>
-       <div class="logo">
-           <img src="images/hlogo1.png" alt="Company Logo">
-       </div>
-       
-           <div class="menu">
-               <a class="menu-item" href="indexLogged.jsp">Home</a>
-               <a class="menu-item" href="MakeReservation.jsp">Find Rooms</a>
-               <a class="menu-item" href="profile">Profile</a>
-               <a class="menu-item" href="reservs">My Reservations</a>
-               <a class="menu-item" href="AboutUsLogged.jsp">About Us</a>
-               <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
-           </div>
-       
-       <div class="signup-login">
-           <a class="login-button" href="logout">Logout</a>
-           
-       </div>
-    </nav>
-    
+	<%	HttpSession ses = request.getSession();
+	 	if(ses.getAttribute("loggedUserId") != null) { %>
+		 <nav>
+	       <div class="logo">
+	           <img src="images/hlogo1.png" alt="Company Logo">
+	       </div>
+	       
+	           <div class="menu">
+	               <a class="menu-item" href="indexLogged.jsp">Home</a>
+	               <a class="menu-item" href="MakeReservation.jsp">Find Rooms</a>
+	               <a class="menu-item" href="profile">Profile</a>
+	               <a class="menu-item" href="reservs">My Reservations</a>
+	               <a class="menu-item" href="AboutUsLogged.jsp">About Us</a>
+	               <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
+	           </div>
+	       
+	       <div class="signup-login">
+	           <a class="login-button" href="logout">Logout</a>
+	           
+	       </div>
+	    </nav>
+	  <%}else{ %>
+			 <nav>
+			    <div class="logo">
+			        <img src="images/hlogo1.png" alt="Company Logo">
+			    </div>
+			    
+			        <div class="menu">
+			            <a class="menu-item" href="index.jsp">Home</a>
+			            <a class="menu-item" href="login.jsp">Find Rooms</a>
+			            <a class="menu-item" href="AboutUs.jsp">About Us</a>
+			             
+			
+			            
+			        </div>
+			    
+			    <div class="signup-login">
+			        <a class="login-button" href="login.jsp">Login</a>
+			        <a class="signup-button" href="customerinsert.jsp">Signup</a>
+			    </div>
+			 </nav>
+		<%} %>
     
     <div class="section-1">
     	<img src="images/indexImage1.jpg">
@@ -37,7 +59,11 @@
     
     
     <div class="form-div">
+    <%if(ses.getAttribute("loggedUserId") != null){ %>
     	<form action="find" method="get">
+    <%}else{ %>
+    	<form action="login.jsp" method="get">
+    <%} %>
     		<div class="form-details">
 	    		<div class="guest-div">
 	    			<label for="guest">Guests: </label>
@@ -86,7 +112,13 @@
     			Climate control is available in each room to ensure guests' comfort throughout their stay.<br><br>Safety features such as smoke detectors, fire alarms, and a safe for storing valuables are also provided. 
     			Daily housekeeping services are available to keep your room clean and tidy.
     		</p>
-    		<a href="MakeReservation.jsp"><button class="book-now-button">BOOK NOW</button></a>
+    		<%if(ses.getAttribute("loggedUserId") != null){ %>
+    			<a href="MakeReservation.jsp">
+    		<%}else{ %>
+    			<a href="login.jsp">
+    		<%} %>
+    				<button class="book-now-button">BOOK NOW</button>
+    			</a>
     	</div>
   
     </div>

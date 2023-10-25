@@ -31,7 +31,7 @@ public class UpdateReservationServlet extends HttpServlet {
 		
 		if(ret = true) {
 			
-			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("reservs");
 			dis.forward(request, response);
 		
 		}

@@ -20,7 +20,7 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.removeAttribute("loggedUserId");
 		
-		RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("indexLogged.jsp");
 		dis.forward(request, response);
 	}
 

@@ -1,0 +1,73 @@
+@charset "ISO-8859-1";
+
+.header-section{
+	width: 102%;
+	margin-top: 73px;
+	padding-bottom: 70px;
+	background-color: #444444;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-section p{
+	text-align: center;
+	font-size: 24px;
+	color: #B4975A;
+	font-weight: bold;
+}
+
+.reservation-list-div{
+	margin-top: 150px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	
+}
+
+.reservation-details-div{
+	display: flex;
+	background-color: lightgrey;
+	margin-bottom: 50px;
+	width: 1115.640px;
+}
+
+.reservation-details-div img{
+	width: 150px;
+}
+
+.reservation-info{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 720px;
+	margin-left: 40px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+
+.reservation-info div{
+	margin-right: 41px;
+}
+
+
+.reservation-info p{
+	font-size: 18px;
+	font-weight: bold;
+	color: #444444;
+}
+
+
+.update-button-div{
+	padding-top: 104px;
+}
+
+
+.update-button-div a{
+	text-decoration: none;
+	padding: 15px;
+	background-color: #B4975A;
+	color: white;
+	margin-left: 13px;
+}

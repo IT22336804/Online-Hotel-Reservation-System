@@ -28,7 +28,7 @@
 }
 
 .form-details{
-	background-color: whitesmoke;
+	background-color: beige;
 	width: 850px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -45,7 +45,7 @@
 	width: 170px;
 	padding: 10px 20px 10px 10px;
 	border-style: none;
-	background-color: whitesmoke;
+	background-color: beige;
 	border-right-style: solid;
 	cursor: pointer;
 }
