@@ -67,6 +67,7 @@
     <div class="rt-container">
     	<div class="col-rt-12">
         	<div class="rt-heading">
+        		<br>
             	<h1>Hi , Welcome To Your Profile</h1>
                 <p></p>
             </div>
