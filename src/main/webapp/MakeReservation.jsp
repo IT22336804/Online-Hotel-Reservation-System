@@ -37,7 +37,7 @@
 	<div class="header-section">
 		<p>Rooms</p>
 	    <div class="form-div">
-	    	<form action="find" method="get">
+	    	<form action="find" method=get>
 	    		<div class="form-details">
 		    		<div class="guest-div">
 		    			<label for="guest">Guests: </label>
@@ -67,7 +67,14 @@
 	    </div>
 	  </div>
 	  
+	<%
+		if(request.getAttribute("exception") != null){
+	%>
 	
+		<div style="color: red;"><script>alert("${exception}")</script></div>
+	<%
+		}
+	%>
 		
 	<div class="rooms">	  
 		<c:forEach var="room" items = "${roomDetails}">

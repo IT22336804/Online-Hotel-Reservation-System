@@ -5,8 +5,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>My Reservations</title>
 <link rel="stylesheet" href="header-footer.css">
+<link rel="stylesheet" href="MyReservations.css">
 </head>
 <body>
 		
@@ -29,47 +30,50 @@
 	         
 	     </div>
 	</nav>
-	
-	<div>
+	<div class= "header-section">
+		<p>My Reservations</p>
+	</div>
+	<div class="reservation-list-div">
 		<c:forEach var="reservs" items="${reservs}">
 			<c:set var="resId" value="${reservs.resID}" scope="session"/>
 			<c:set var="resPrice" value="${reservs.price}" scope="session"/>
 			<c:set var="startD" value="${reservs.startDate}" scope="session"/>
 			<c:set var="endD" value="${reservs.endDate}" scope="session"/>
 			
-		
-			<div>reservation ID: ${reservs.resID}</div><br>
-			<div>check-in: ${reservs.startDate}</div><br>
-			<div>check-out: ${reservs.endDate}</div><br>
-			<div>bill: ${reservs.payment}</div><br>
-			<div>guests: ${reservs.guests}</div><br>
-			<div>room name: ${reservs.roomName}</div><br>
-			<div>price: ${reservs.price}</div><br>
-					
-			<div>
-			
-				<c:url value="UpdateReservation.jsp" var="updateRes">
-					<c:param name="resId" value="${resId}"/>
-					<c:param name="resPrice" value="${resPrice}"/>
-					<c:param name="startD" value="${startD}"/>
-					<c:param name="endD" value="${endD}"/>
-					
-				</c:url>
-			
-				<a href="${updateRes}">Update</a>
-			</div><br>
-			
-			<div>
-			
-				<c:url value="deleteBook" var="deleteRes">
-					<c:param name="rId" value="${resId}"/>
-					
-				</c:url>
-			
-				<a href="${deleteRes}" onclick="return confirm('Are you sure you want to delete your reservation')">Delete</a>
-			
-			</div><br><br><br>
-			
+			<div class="reservation-details-div">
+				<img src="${reservs.imageLocation}">
+				<div class="reservation-info">	
+					<div><p>Book ID:</p> ${reservs.resID}</div><br>
+					<div><p>room name:</p> ${reservs.roomName}</div><br>
+					<div><p>check-in:</p> ${reservs.startDate}</div><br>
+					<div><p>check-out:</p> ${reservs.endDate}</div><br>
+					<div><p>guests:</p> ${reservs.guests}</div><br>					
+					<div><p>bill:</p>LKR ${reservs.payment}0</div><br>
+				</div>
+				<div class="update-button-div">
+				
+					<c:url value="UpdateReservation.jsp" var="updateRes">
+						<c:param name="resId" value="${resId}"/>
+						<c:param name="resPrice" value="${resPrice}"/>
+						<c:param name="startD" value="${startD}"/>
+						<c:param name="endD" value="${endD}"/>
+						
+					</c:url>
+				
+					<a href="${updateRes}">Update</a>
+				</div><br>
+				
+				<div class="update-button-div">
+				
+					<c:url value="deleteBook" var="deleteRes">
+						<c:param name="rId" value="${resId}"/>
+						
+					</c:url>
+				
+					<a href="${deleteRes}" onclick="return confirm('Are you sure you want to delete your reservation')">Delete</a>
+				
+				</div>
+			</div>
 		</c:forEach>
 	</div>
 	

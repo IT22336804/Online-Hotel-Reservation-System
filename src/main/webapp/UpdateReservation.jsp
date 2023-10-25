@@ -7,6 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="header-footer.css">
+<link rel="stylesheet" href="UpdateReservation.css">
 </head>
 <body>
 	<nav>
@@ -15,10 +16,12 @@
 	     </div>
 	     
 	     <div class="menu">
-	         <a class="menu-item" href="#">Home</a>
-	         <a class="menu-item" href="#">Find Rooms</a>
-	         <a class="menu-item" href="#">About Us</a>
-	         <a class="menu-item" href="reservs">My Reservations</a>
+           	<a class="menu-item" href="indexLogged.jsp">Home</a>
+               <a class="menu-item" href="MakeReservation.jsp">Find Rooms</a>
+               <a class="menu-item" href="profile">Profile</a>
+               <a class="menu-item" href="reservs">My Reservations</a>
+               <a class="menu-item" href="AboutUsLogged.jsp">About Us</a>
+               <a class="menu-item" href="createInquiry.jsp">Contact Us</a>
 	     </div>
 	     
 	     <div class="signup-login">
@@ -27,34 +30,39 @@
 	     </div>
 	</nav>
 
+	<div class= "header-section">
+		<p>Update Reservations</p>
+	</div>
 
-	<div>
+	<div class="form-div">
     	<form action="updateBook" method="get">
-   			<div>
-   				<input type="text" name="reserveId" value="<%= request.getParameter("resId") %>" hidden>
-   				<input type="text" name="reservePrice" value="<%= request.getParameter("resPrice") %>" hidden>
+    			<div>
+	   				<input type="text" name="reserveId" value="<%= request.getParameter("resId") %>" hidden>
+	   				<input type="text" name="reservePrice" value="<%= request.getParameter("resPrice") %>" hidden>
    				
-   			</div>
-    	
-    		<div>
-    			<label for="guest">Guest:</label><br>
-    			<select name="guest" id="guest" required>
-    				<option value="" selected disabled hidden>Select an Option</option> 
-    				<option value="1">1 guest</option>
-    				<option value="2">2 guests</option>
-    				<option value="3">3 guests</option>
-    			</select>
-    		</div>
-    		<div>
-    			<label for="startDate">Check-in:</label><br>
-    			<input type="date" name="startDate" id="startDate" min="2023-10-23" value="<%= request.getParameter("startD") %>" required >
-    		</div> 
-    		<div>
-    			<label for="endDate">Check-out:</label><br>
-    			<input type="date" name="endDate" id="endDate" min="2023-10-23" value="<%= request.getParameter("endD") %>" required>
-    		</div>
-    		<div>
-    			
+   				</div>
+	    		<div class="form-details">
+		    		<div class="guest-div">
+		    			<label for="guest">Guests: </label>
+		    			<select name="guest" id="guest" required>
+		    				<option value="" selected disabled hidden>Select an Option</option> 
+		    				<option value="1">1 guest</option>
+		    				<option value="2">2 guests</option>
+		    				<option value="3">3 guests</option>
+		    			</select>
+		    		</div>
+		    		
+		    		<div class="start-date-div">
+		    			<label for="startDate">Check-in: </label>
+		    			<input type="date" name="startDate" id="startDate" min="2023-10-23" value="<%= request.getParameter("startD") %>" required >
+		    		</div>
+		    		
+		    		<div class="end-date-div">
+		    			<label for="endDate">Check-out: </label>
+		    			<input type="date" name="endDate" id="endDate" min="2023-10-23" value="<%= request.getParameter("endD") %>" required>
+		    		</div>
+		    	</div>
+    		<div class="update-button-div">
     			<input type="submit" name="submit" id="submit" value="Update">
     		</div>
     		
