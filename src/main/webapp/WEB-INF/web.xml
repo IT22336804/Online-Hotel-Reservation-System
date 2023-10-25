@@ -145,7 +145,6 @@
 		<url-pattern>/update</url-pattern>
 	</servlet-mapping>
 	
-	
 	<servlet>
 		<servlet-name>deleteInquiry</servlet-name>
 		<servlet-class>com.Inquiry.DeleteInquiryServlet</servlet-class>
@@ -153,6 +152,45 @@
 	<servlet-mapping>
 		<servlet-name>deleteInquiry</servlet-name>
 		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>insertRoom</servlet-name>
+		<servlet-class>admin.rooms.RoomInsertServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>insertRoom</servlet-name>
+		<url-pattern>/insertRoom</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>showRoom</servlet-name>
+		<servlet-class>admin.rooms.RoomViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>showRoom</servlet-name>
+		<url-pattern>/showRoom</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateRoom</servlet-name>
+		<servlet-class>admin.rooms.RoomUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateRoom</servlet-name>
+		<url-pattern>/updateRoom</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>deleteRoom</servlet-name>
+		<servlet-class>admin.rooms.RoomDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteRoom</servlet-name>
+		<url-pattern>/deleteRoom</url-pattern>
 	</servlet-mapping>
 		 
 </web-app>
