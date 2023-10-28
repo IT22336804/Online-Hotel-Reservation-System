@@ -40,8 +40,9 @@ body {
 }
 
 .rooms-list-div{
+	width: 1200px;
 	margin-top: 100px;
-	margin-left: 300px;
+	margin-left: 255px;
 	margin-right: 100px;
 	padding: 10px 5px 10px 5px;
 	background-color: rgb(230, 232, 237);
@@ -50,4 +51,9 @@ body {
 .room-div{
 	background: white;
 	display: flex;
+}
+
+.room-det{
+	margin-right: 20px;
+	margin-top: 22px;
 }

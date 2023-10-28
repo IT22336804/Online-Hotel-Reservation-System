@@ -25,8 +25,8 @@
        </div>
        
            <div class="menu">
-               <a class="menu-item" href="login.jsp">Home</a>
-               <a class="menu-item" href="#">About Us</a>
+               <a class="menu-item" href="index.jsp">Home</a>
+               <a class="menu-item" href="AboutUs.jsp">About Us</a>
                
            </div>
        

@@ -11,9 +11,9 @@
 <body>
 
 	<div class="sidemenu">
-	  <a href="#home">Home</a>
-	  <a href="#news">View Rooms</a>
-	  <a class="active" href="#contact">Create Room</a>
+	  <a href="AdminDashboard.jsp">Home</a>
+	  <a href="showRoom">View Rooms</a>
+	  <a class="active" href="roomInsert.jsp">Create Room</a>
 	  <a href="#about">profile</a>
 	</div>
 	<div class="form-div">
