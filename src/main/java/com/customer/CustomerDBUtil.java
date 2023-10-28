@@ -109,7 +109,7 @@ public class CustomerDBUtil {
 			
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 		return cus;
