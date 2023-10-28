@@ -69,7 +69,14 @@
     	</form>
     </div>
     
-    
+    <%
+		if(request.getAttribute("exception") != null){
+	%>
+	
+		<script>alert("${exception}")</script>
+	<%
+		}
+	%>
     
     
     

@@ -71,7 +71,7 @@
 		if(request.getAttribute("exception") != null){
 	%>
 	
-		<div style="color: red;"><script>alert("${exception}")</script></div>
+		<script>alert("${exception}")</script>
 	<%
 		}
 	%>
