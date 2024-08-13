@@ -1,0 +1,107 @@
+create type emp_t;
+/
+
+create type dept_t as object(
+    deptno char(3),
+    deptname varchar2(36),
+    mgrno ref emp_t,
+    admrdept ref dept_t
+);
+/
+
+create type emp_t as object(
+    empno char(6),
+    firstname varchar2(12),
+    lastname varchar2(15),
+    workdept ref dept_t,
+    sex char(1),
+    birthdate date,
+    salary number(8,2)
+);
+/
+
+create table oremp of emp_t(
+    empno primary key,
+    firstname not null,
+    lastname not null
+);
+
+create table ordept of dept_t(
+    deptno primary key,
+    deptname not null
+);
+
+insert into oremp values(
+    emp_t('000010', 'CHRISTINE', 'HAAS', null, 'F', '14/AUG/53', 72750 )
+);
+
+insert into oremp values(
+    emp_t('000020', 'MICHAEL', 'THOMPSON', null, 'M', '02/FEB/68', 61250 )
+);
+
+insert into oremp values(
+    emp_t('000030', 'SALLY', 'KWAN', null, 'F', '11/MAY/71', 58250 )
+);
+
+insert into oremp values(
+    emp_t('000060', 'IRVING', 'STERN', null, 'M', '07/JUL/65', 55555 )
+);
+
+insert into oremp values(
+    emp_t('000070', 'EVA', 'PULASKI', null, 'F', '26/MAY/73', 56170 )
+);
+
+insert into oremp values(
+    emp_t('000050', 'JOHN', 'GEYER', null, 'M', '15/SEP/55', 60175 )
+);
+
+insert into oremp values(
+    emp_t('000090', 'EILEEN', 'HENDERSON', null, 'F', '15/MAY/61', 49750 )
+);
+
+insert into oremp values(
+    emp_t('000100', 'THEODORE', 'SPENSER', null, 'M', '18/DEC/76', 46150 )
+);
+
+
+
+insert into ordept values(
+    dept_t('A00',
+    'SPIFFY COMPUTER SERVICE DIV.',
+    (select ref(e) from oremp e where empno = '000010'),
+    null)
+);
+
+insert into ordept values(
+    dept_t('B01',
+    'PLANNING',
+    (select ref(e) from oremp e where empno = '000020'),
+    null)
+);
+
+insert into ordept values(
+    dept_t('C01',
+    'INFORMATION CENTRE',
+    (select ref(e) from oremp e where empno = '000030'),
+    null)
+);
+
+insert into ordept values(
+    dept_t('D01',
+    'DEVELOPMENT CENTRE',
+    (select ref(e) from oremp e where empno = '000060'),
+    null)
+);
+
+
+
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'A00') where e.empno = '000010';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'B01') where e.empno = '000020';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'C01') where e.empno = '000030';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'D01') where e.empno = '000060';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'D01') where e.empno = '000070';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'C01') where e.empno = '000050';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'B01') where e.empno = '000090';
+update oremp e set e.workdept = (select ref(d) from ordept d where deptno = 'B01') where e.empno = '000100';
+
+select * from ordept
